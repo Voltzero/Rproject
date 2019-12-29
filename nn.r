@@ -26,3 +26,9 @@ hist(cals, main = "Rozkład ilości kalorii w płatkach", xlab = "Ilość kalori
 boxplot(cals, main = "Rozkład ilości kalorii w płatkach")
 
 dev.off()
+mode
+
+dominanta <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
