@@ -33,6 +33,42 @@ hist(cals, main = "Rozkład ilości kalorii w płatkach", xlab = "Ilość kalori
 boxplot(cals, main = "Rozkład ilości kalorii w płatkach")
 
 dev.off()
-mode
 
+#3. Wyznaczanie miar rozkładu
 
+# 1) Miary połołenia 
+
+# a) CUKRY
+mean(sugs) #śr. arytmet.
+median(sugs) #mediana
+quantile(sugs) #kwantyle
+
+# B) KALORIE
+mean(cals)
+median(cals)
+quantile(cals)
+
+# 2) Miary rozproszenia (dyspresja)
+
+# A) CUKRY
+sd(sugs) #odchylenie standard.
+max(sugs) - min(sugs) #rozstęp
+IQR(sugs) #rozstęp międzykwantylowy
+
+# B) KALORIE
+sd(cals)
+max(cals) - min(cals)
+IQR(cals)
+
+# c) Miary badające kształt rozkładu
+
+install.packages("moments")
+library(moments)
+
+# A) CUKRY
+skewness(sugs) #współczynnik skośności
+kurtosis(sugs) #kurtoza
+
+# B) KALORIE
+skewness(cals)
+kurtosis(cals)
