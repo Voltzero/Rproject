@@ -26,20 +26,3 @@ hist(cals, main = "Rozkład ilości kalorii w płatkach", xlab = "Ilość kalori
 boxplot(cals, main = "Rozkład ilości kalorii w płatkach")
 
 dev.off()
-
-
-
-
-
-
-
-#apply(sugs,2,median) #to samo co  -> median(myData$sugars)
- 
-#pdf("Sugars.pdf")
-# boxplot(sugs, main ="Rozłożenie ilości cukru w p?atkach")
-#plot(ecdf(sugs),main ="Roz?o?enie ilo?ci cukru w p?atkach")
-#hist(sugs, main ="Roz?o?enie ilo?ci cukru w p?atkach")
-#lines(sugs,lwd =2,col ="blue")
-#dev.off() #!!!!
-
-
