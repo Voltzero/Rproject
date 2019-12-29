@@ -9,6 +9,13 @@ myData <- read_excel("cereal.xlsx")
 cals <- myData$calories
 sugs <- myData$sugars
 
+dominanta <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+result<-dominanta(sugs)
+
 # a) Cukry - histogram i wykres pude?kowy
 
 pdf("Cukry.pdf")
@@ -28,7 +35,4 @@ boxplot(cals, main = "Rozkład ilości kalorii w płatkach")
 dev.off()
 mode
 
-dominanta <- function(v) {
-  uniqv <- unique(v)
-  uniqv[which.max(tabulate(match(v, uniqv)))]
-}
+
